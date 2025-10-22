@@ -488,8 +488,19 @@ def main():
     # Check if we should run in test mode
     test_mode = '--test' in sys.argv or '-t' in sys.argv
     
+    # Check for custom test limit
+    test_limit = 5  # Default
+    for arg in sys.argv:
+        if arg.startswith('--limit='):
+            try:
+                test_limit = int(arg.split('=')[1])
+                test_mode = True
+                logger.info(f"Custom test limit: {test_limit}")
+            except ValueError:
+                logger.error("Invalid limit value. Using default: 5")
+    
     # Create scraper
-    scraper = LawyerScraper(test_mode=test_mode, test_limit=5)
+    scraper = LawyerScraper(test_mode=test_mode, test_limit=test_limit)
     
     # Run scraping
     scraper.process_lawyers()

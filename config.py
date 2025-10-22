@@ -16,10 +16,10 @@ BACKOFF_FACTOR = 2  # Exponential backoff multiplier
 TOKEN_REFRESH_MARGIN = 300  # Refresh token 5 min before expiry (seconds)
 
 # File Paths
-INPUT_CSV = "avocats.csv"
-OUTPUT_CSV = "avocats_enriched.csv"
-CHECKPOINT_FILE = "checkpoint.json"
-LOG_FILE = "scraper.log"
+INPUT_CSV = "data/avocats.csv"
+OUTPUT_CSV = "data/avocats_enriched.csv"
+CHECKPOINT_FILE = "data/checkpoint.json"
+LOG_FILE = "data/scraper.log"
 
 # CSV Configuration
 CSV_DELIMITER = ";"
