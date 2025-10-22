@@ -10,7 +10,7 @@ __pycache__/
 *.pyzwz
 *.pyzwzw
 
-avocats_enriched.csv
+data/avocats_enriched.csv
 
 .env
 
