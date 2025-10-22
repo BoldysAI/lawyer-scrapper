@@ -1,0 +1,17 @@
+# Lawyer Scraper - Python Dependencies
+
+# Browser automation for token extraction
+playwright>=1.48.0
+
+# HTTP requests for API calls
+requests>=2.31.0
+
+# CSV processing
+pandas>=2.2.0
+
+# JWT decoding
+PyJWT>=2.8.0
+
+# For better logging
+colorlog>=6.8.2
+
